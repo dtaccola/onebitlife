@@ -1,8 +1,10 @@
 import React from "react";
 import { View, ScrollView, Text, Image, StyleSheet } from "react-native";
 
+import LifeStatus from "../../Components/Common/LifeStatus";
+
 export default function Start() {
-    return(
+    return (
         <View style={styles.container}>
             <ScrollView showVerticalScrollIndicator={false}>
                 <View style={{ alignItems: "center" }}>
@@ -10,18 +12,19 @@ export default function Start() {
                         source={require("../../assets/icons/logo3.png")}
                         style={styles.logo}
                     />
+                    <LifeStatus />
                     <Text style={styles.description}>
                         Vamos transformar sua vida {"\n"} em jogo , buscando sempre {"\n"} o melhor nível
                     </Text>
                 </View>
             </ScrollView>
-        </View>    
+        </View>
     )
 }
 
 const styles = StyleSheet.create({
     container: {
-        flex:1,
+        flex: 1,
         backgroundColor: "rgba(21, 21, 21, 0.98)",
     },
 
@@ -29,7 +32,7 @@ const styles = StyleSheet.create({
         width: 300,
         height: 60,
         marginTop: 60,
-        marginBottom: 20,  
+        marginBottom: 20,
     },
 
     description: {
